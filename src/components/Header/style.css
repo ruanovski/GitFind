@@ -7,8 +7,8 @@ header {
   justify-content: center;
 }
 
-h1 {
-  font-size: 30px;
+.h1Logo {
+  font-size: 35px;
   color: #ffffff;
   font-family: "Kanit", sans-serif;
   font-style: italic;
