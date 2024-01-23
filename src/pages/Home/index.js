@@ -1,9 +1,34 @@
+import { useState } from "react";
 import Header from "../../components/Header";
 import background from "../../assets/background.png";
 import ItemList from "../../components/ItemList";
 import "./style.css";
 
 function App() {
+  const [user, setUser] = useState("");
+  const [currentUser, setCurrentUser] = useState(null);
+  const [repos, setRepos] = useState(null);
+
+  const handleGetData = async () => {
+    const userData = await fetch(`https://api.github.com/users/${user}`);
+    const newUser = await userData.json();
+    console.log(newUser);
+
+    if (newUser.name) {
+      const { avatar_url, name, bio, login } = newUser;
+      setCurrentUser({ avatar_url, name, bio, login });
+
+      const reposData = await fetch(
+        `https://api.github.com/users/${user}/repos`
+      );
+      const newRepos = await reposData.json();
+
+      if (newRepos.length) {
+        setRepos(newRepos);
+      }
+    }
+  };
+
   return (
     <div className="App">
       <Header />
@@ -11,28 +36,50 @@ function App() {
         <img src={background} alt="github log" className="background" />
         <div className="info">
           <div>
-            <input type="text" name="user" placeholder="@username" />
-            <button>Find</button>
-          </div>
-          <div className="profile">
-            <img
-              src="https://avatars.githubusercontent.com/u/97916151?s=400&u=65128de805bcc7fb48acf78cad63b92507db5e05&v=4"
-              alt="github user"
+            <input
+              type="text"
+              name="user"
+              value={user}
+              onChange={(event) => setUser(event.target.value)}
+              placeholder="@username"
             />
+            <button onClick={handleGetData}>Find</button>
+          </div>
+          {currentUser?.name ? (
+            <>
+              <div className="profile">
+                <img src={currentUser.avatar_url} alt="github user" />
+                <div>
+                  <h2>{currentUser.name}</h2>
+                  <h5>@{currentUser.login}</h5>
+                  <br />
+                  <p>{currentUser.bio}</p>
+                </div>
+              </div>
+              <hr />
+            </>
+          ) : null}
+          {repos?.length ? (
             <div>
-              <h2>Ruan Victor</h2>
-              <h5>@username</h5>
-              <br />
-              <p>Descrição</p>
+              <h4 className="RepositoriesHeader">Repositories</h4>
+              {repos
+                .filter((repo) => !repo.private)
+                .map((repo) => (
+                  <ItemList
+                    title={repo.name}
+                    description={
+                      repo.description ? (
+                        repo.description
+                      ) : (
+                        <div className="errorMessage">
+                          <span>This project has no description</span>
+                        </div>
+                      )
+                    }
+                  />
+                ))}
             </div>
-          </div>
-          <hr />
-          <div>
-            <h4 className="RepositoriesHeader">Repositories</h4>
-            <ItemList title="teste" description="descricao" />
-            <ItemList title="teste" description="descricao" />
-            <ItemList title="teste" description="descricao" />
-          </div>
+          ) : null}
         </div>
       </div>
     </div>
