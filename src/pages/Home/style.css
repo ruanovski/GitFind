@@ -89,3 +89,12 @@ button {
   font-weight: 300;
   font-style: italic;
 }
+
+a {
+  text-decoration: none;
+  color: #539bf5;
+}
+
+button {
+  cursor: pointer;
+}

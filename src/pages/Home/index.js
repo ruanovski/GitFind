@@ -66,7 +66,11 @@ function App() {
                 .filter((repo) => !repo.private)
                 .map((repo) => (
                   <ItemList
-                    title={repo.name}
+                    title=<a
+                      href={`https://github.com/${currentUser.login}/${repo.name}`}
+                    >
+                      {repo.name}
+                    </a>
                     description={
                       repo.description ? (
                         repo.description
