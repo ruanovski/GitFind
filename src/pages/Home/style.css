@@ -20,7 +20,7 @@
 }
 
 input {
-  width: 80%;
+  width: 60%;
   min-width: 250px;
   margin-right: 12px;
   padding: 10px;
@@ -32,6 +32,7 @@ input {
 }
 
 button {
+  width: 20%;
   margin-right: 12px;
   padding: 10px;
   font-size: 18px;
@@ -40,4 +41,51 @@ button {
   border: 1px solid #999999;
   color: #999999;
   background-color: #2d333b;
+}
+.profile {
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+.profile img {
+  width: 120px;
+  height: 120px;
+  border-radius: 64px;
+  border: 2px solid rgba(229, 229, 229, 1);
+  margin-right: 40px;
+}
+
+.profile h2 {
+  color: #999999;
+  font-family: "Kanit", sans-serif;
+  font-size: 25px;
+  margin-top: 10px;
+  line-height: 10px;
+  font-weight: 500;
+}
+
+.profile h5 {
+  color: rgba(153, 153, 153, 1);
+  font-family: "Kanit", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  margin: 0;
+}
+
+.profile p {
+  color: rgba(153, 153, 153, 1);
+  font-family: "Kanit", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.RepositoriesHeader {
+  font-size: 32px;
+  color: #ffffff;
+  margin: 12px 0;
+  text-align: center;
+  font-weight: 300;
+  font-style: italic;
 }
