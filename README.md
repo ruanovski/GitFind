@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# GitHub Profile Viewer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descrição
 
-## Available Scripts
+O GitHub Profile Viewer é uma aplicação web desenvolvida utilizando React, JavaScript, HTML e CSS. Com esta aplicação, os usuários podem buscar o nome de um usuário do GitHub e obter informações detalhadas, incluindo a foto do usuário, descrição, biografia e lista de repositórios.
 
-In the project directory, you can run:
+## Recursos Principais
 
-### `npm start`
+- **Busca de Usuários:** Permite aos usuários inserir o nome de um usuário do GitHub para visualizar seu perfil.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Detalhes do Perfil:** Exibe a foto do usuário, descrição e biografia, fornecendo uma visão rápida e informativa.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Lista de Repositórios:** Apresenta os repositórios do usuário, incluindo seus nomes e descrições.
 
-### `npm test`
+- **Link Direto para Repositórios:** Cada repositório exibido possui um link direto para o respectivo repositório no GitHub, facilitando a navegação.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tecnologias Utilizadas
 
-### `npm run build`
+- **React:** Utilizado para a construção da interface de usuário dinâmica e responsiva.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **JavaScript:** Utilizado para a lógica de busca e manipulação de dados.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **HTML e CSS:** Responsáveis pela estrutura e estilização da aplicação.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Fetch API:** Utilizada para realizar requisições à API do GitHub e obter os dados necessários.
 
-### `npm run eject`
+## Como Usar
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone este repositório.
+2. Abra o terminal na pasta do projeto.
+3. Instale as dependências com o comando: `npm install`.
+4. Inicie a aplicação com o comando: `npm start`.
+5. Abra o navegador e acesse [http://localhost:3000](http://localhost:3000).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Convite à Contribuição
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Fique à vontade para contribuir com melhorias, correções de bugs ou novos recursos. Basta abrir uma *issue* ou enviar um *pull request*.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Agradecimentos
 
-## Learn More
+Agradeço por explorar o GitHub Profile Viewer! Espero que esta aplicação seja útil e inspire outros desenvolvedores a criar projetos incríveis.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**#React #GitHub #WebDevelopment #JavaScript #CSS #HTML #OpenSource**
